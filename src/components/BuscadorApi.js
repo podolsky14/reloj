@@ -4,8 +4,8 @@ import "../index.css"
 
 export default function BuscadorApi() {
 const[usuario, setUsuario] = useState([])
-const[busqueda, setBusqueda] = useState([])
 const [tablaUsuarios, setTablaUsuarios]= useState([]);
+const[busqueda, setBusqueda] = useState([])
 
 useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users").then(res=>{
@@ -25,15 +25,11 @@ useEffect(() => {
 
   }, [])
 
-  const onChange = (e) => {
-    setBusqueda(e.target.value);
-    filtrar(e.target.value);
-  }
+ 
 
   const filtrar=(terminoBusqueda)=>{
     var resultadosBusqueda= tablaUsuarios.filter((elemento)=>{
       if(elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-      || elemento.company.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
       ){
         return elemento;
       }
@@ -41,8 +37,10 @@ useEffect(() => {
     setUsuario(resultadosBusqueda);
   }
 
-  
-
+  const onChange = (e) => {
+    setBusqueda(e.target.value);
+    filtrar(e.target.value);
+  }
 
   return (
     <>

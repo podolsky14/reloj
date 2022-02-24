@@ -1,25 +1,11 @@
-import "./index.css"
-
-
-
-import BuscadorApi from "./components/BuscadorApi";
-
-//import Ejemplo from "./components/Ejemplo";
+//import BuscadorApi from "./components/BuscadorApi";
+import Reloj from "./components/Reloj";
 
 function App() {
 
-
-
-
-
-
-
-
   return (
     <>
-    <BuscadorApi/>
-
-  
+    <Reloj/>
     </>
   );
 }
