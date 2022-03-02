@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import "../App.css"
-
+const data = ""
 export default function Reloj() {
-    const [state, setstate] = useState(null)
+    const [state, setstate] = useState(data)
  
 setInterval(() => {
     setstate({
-        state : new Date().toLocaleTimeString()
+       data : new Date().toLocaleTimeString()
     })
 }, 1000);
    
   return (
  <div className='border border-primary'>
-<h1 className='reloj'>{state}</h1>
+<h1 className='reloj'>{state.data}</h1>
     </div>
   )
 }
