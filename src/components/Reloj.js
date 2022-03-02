@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import "../App.css"
-const data = new Date().toLocaleTimeString()
+const data = ""
 export default function Reloj() {
     const [state, setstate] = useState(data)
  
 setInterval(() => {
-   
     setstate({
         data : new Date().toLocaleTimeString()
     })
